@@ -1,0 +1,68 @@
+@import '../functions/functions'
+@import '../base/typography'
+@import 'responsive'
+
+.container
+    margin-left: auto
+    margin-right: auto
+    padding: 0 $ds-container-padding
+
+    /* Mobile Styles */
+    @media screen and (max-width: $ds-mobile-width)
+        max-width: 100%
+        padding: 0 rem(10px)
+
+    /* Tablet Styles */
+    @media screen and (min-width: $ds-tablet-min-width) and (max-width: $ds-tablet-max-width)
+        max-width: 100%
+        padding: 0 rem(24px)
+
+    /* Big Screen Styles */
+    @media screen and (min-width: $ds-large-screen-width)
+        max-width: $ds-container-max-width
+
+$ds-spacing-tiny: rem(4px)
+$ds-spacing-xsmall: rem(8px)
+$ds-spacing-small: rem(16px)
+$ds-spacing-medium: rem(24px)
+$ds-spacing-large: rem(32px)
+$ds-spacing-xlarge: rem(64px)
+
+.d
+    &-flex
+        display: flex
+
+    &-block
+        display: block
+
+    &-none
+        display: none
+
+    &-md
+        &-flex
+            @media screen and (min-width: $ds-mobile-width)
+                display: flex
+        &-block
+            @media screen and (min-width: $ds-mobile-width)
+                display: block
+        &-none
+            @media screen and (min-width: $ds-mobile-width)
+                display: none
+
+.w
+    &-25
+        width: 25%
+    &-50
+        width: 50%
+    &-75
+        width: 75%
+    &-100
+        width: 100%
+
+.justify-content
+    &-center
+        justify-content: center
+    &-around
+        justify-content: space-around
+    &-between
+        justify-content: space-between

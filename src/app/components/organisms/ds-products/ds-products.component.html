@@ -1,0 +1,11 @@
+<div class="d-flex ds-products-row justify-content-between">
+    <div class="d-flex justify-content-center w-100">
+        <h1>Products</h1>
+    </div>
+    <div class="ds-products-col" *ngFor="let product of products$ | async">
+        <ds-card>
+            <ds-product-item [product]="product"></ds-product-item>
+            <ds-button [type]="buttonType" (handleClick)="addProductToCart(product)">Add to cart</ds-button>
+        </ds-card>
+    </div>
+</div>

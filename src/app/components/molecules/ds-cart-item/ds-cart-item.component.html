@@ -1,0 +1,23 @@
+<ng-container *ngFor="let cartProduct of products; let i = index">
+    <ds-card>
+        <div class="d-flex">
+            <div class="w-25">
+                <div class="ds-cart-item-image-wrapper">
+                </div>
+            </div>
+            <div class="w-75 d-flex justify-content-between">
+                <div>
+                    <h2>{{cartProduct.name}}</h2>
+                    <p class="ds-cart-item-price" appCurrencyFormatter [amount]="cartProduct.price"
+                        [currencyCode]="'EUR'"></p>
+                    <p class="ds-cart-item-helper">Total: <span appCurrencyFormatter [amount]="cartProduct.price"
+                            [currencyCode]="'EUR'"></span></p>
+                    <p class="ds-cart-item-helper">Ref: {{cartProduct.sku}}</p>
+                </div>
+                <div>
+                    <ds-button [type]="buttonType" (click)="onRemove(i)">Remove Item</ds-button>
+                </div>
+            </div>
+        </div>
+    </ds-card>
+</ng-container>

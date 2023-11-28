@@ -1,0 +1,36 @@
+@import '../../../styles/main'
+
+.ds-button
+    align-items: center
+    box-sizing: border-box
+    border: 0
+    cursor: pointer
+    display: flex
+    justify-content: center
+    min-height: rem(48px)
+    min-width: rem(48px)
+    padding: rem(4px) rem(24px)
+    text-align: center
+    width: 100%
+
+    &.button
+        background-color: $ds-mine-shaft
+        color: $ds-white
+        font-weight: 600
+        &:hover
+            background-color: $ds-emperor
+
+    &.link
+        background-color: transparent
+        color: $ds-mine-shaft
+        text-decoration: underline
+        font-weight: 100
+
+    &.small
+        font-size: $ds-text-small
+
+    &.medium
+        font-size: $ds-text-medium
+
+    &.large
+        font-size: $ds-text-large

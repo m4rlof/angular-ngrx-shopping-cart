@@ -1,0 +1,22 @@
+@import '../functions/functions'
+@import '../base/colors'
+@import '../base/typography'
+@import '../layout/layout'
+
+.input-control
+    line-height: rem(20px)
+    font-size: $ds-text-large
+    font-weight: 400
+    text-transform: none
+    border: rem(1px) solid
+    border-radius: 0
+    border-color: $ds-alto
+    box-sizing: border-box
+    height: rem(48px)
+    padding: rem(8px)
+    width: 100%
+    margin-bottom: $ds-spacing-small
+
+    &.error
+        border-color: $ds-red
+        color: $ds-red

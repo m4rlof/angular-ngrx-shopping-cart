@@ -1,0 +1,8 @@
+<div>
+    <div class="ds-product-item-image">
+    </div>
+    <div>
+        <p class="ds-product-item-label">{{product?.name}}</p>
+        <p class="ds-product-item-label" appCurrencyFormatter [amount]="product?.price" [currencyCode]="'EUR'"></p>
+    </div>
+</div>

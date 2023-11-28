@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center">
+    <div class="w-50">
+        <form [formGroup]="productForm">
+            <input class="input-control"
+                [ngClass]="{'error':submitted && productForm.get('productName')?.hasError('required')}" type="text"
+                formControlName="productName" placeholder="Name">
+            <input class=" input-control"
+                [ngClass]="{'error':submitted && productForm.get('productReference')?.hasError('required')}" type="text"
+                formControlName="productReference" placeholder="Reference number">
+            <input class="input-control"
+                [ngClass]="{'error':submitted && productForm.get('productPrice')?.hasError('required')}" type="text"
+                formControlName="productPrice" placeholder="Price">
+            <ds-button [type]="buttonType" [size]="buttonSize" (click)="registerProduct()">Register Product
+            </ds-button>
+        </form>
+    </div>
+</div>
